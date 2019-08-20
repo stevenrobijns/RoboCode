@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Robocode;
 
-namespace BATTERYLOW
+namespace Tomas
 {
     public class R2D2 : Robot
     {
