@@ -7,8 +7,8 @@
     <ProjectGuid>{E8E467E2-FD06-4E3B-B6D8-1A33577E7EEB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BATTERYLOW</RootNamespace>
-    <AssemblyName>BATTERYLOW.CHAPPIE_1.0</AssemblyName>
+    <RootNamespace>Tomas</RootNamespace>
+    <AssemblyName>Tomas.R2D2</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chappie.cs" />
+    <Compile Include="R2D2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

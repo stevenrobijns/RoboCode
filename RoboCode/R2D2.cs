@@ -9,7 +9,7 @@ using Robocode;
 
 namespace BATTERYLOW
 {
-    public class Chappie : Robot
+    public class R2D2 : Robot
     {
         public RobotStatus Status;
 
@@ -102,7 +102,7 @@ namespace BATTERYLOW
 
     public class StrategyFactory
     {
-        public static IStrategy Create(Chappie robot)
+        public static IStrategy Create(R2D2 robot)
         {
             if (robot.EnemyCoordinates.Count > 20 && (robot.Time - robot.LastHit) > 50)
             {
@@ -115,12 +115,12 @@ namespace BATTERYLOW
 
     public interface IStrategy
     {
-        void Execute(Chappie robot);
+        void Execute(R2D2 robot);
     }
 
     public class HugCornersStrategy: IStrategy
     {
-        public void Execute(Chappie robot)
+        public void Execute(R2D2 robot)
         {
             robot.TurnRight(90);
             Console.WriteLine($"Heading: {robot.Heading}");
@@ -138,7 +138,7 @@ namespace BATTERYLOW
 
     public class BullsEyeStrategy : IStrategy
     {
-        public void Execute(Chappie robot)
+        public void Execute(R2D2 robot)
         {
             robot.TurnRight(90);
             Console.WriteLine($"Heading: {robot.Heading}");
@@ -161,7 +161,7 @@ namespace BATTERYLOW
 
     public class CircledStrategy : IStrategy
     {
-        public void Execute(Chappie robot)
+        public void Execute(R2D2 robot)
         {
         }
     }
