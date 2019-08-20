@@ -50,7 +50,7 @@ namespace BATTERYLOW
             else
                 Fire(1);
 
-            Console.WriteLine($"Distance: {e.Distance}");
+            //Console.WriteLine($"Distance: {e.Distance}");
 
             GetEnemyCoordinates(e);
         }
@@ -148,10 +148,11 @@ namespace BATTERYLOW
             else if(robot.IsDrivingLeft())
                 driveAheadDistance = (robot.Status.X - (robot.EnemyCoordinates.Any() ? robot.EnemyCoordinates.Min(p => p.X) : 0) + 100);
             else if(robot.IsDrivingUp())
-                driveAheadDistance = ((robot.EnemyCoordinates.Any() ? robot.EnemyCoordinates.Max(p => p.Y) : 0) - robot.Status.Y) + 100;
+                driveAheadDistance = ((robot.EnemyCoordinates.Any() ? robot.EnemyCoordinates.Max(p => p.Y) : robot.BattleFieldHeight) - robot.Status.Y) + 100;
             else if(robot.IsDrivingRight())
                 driveAheadDistance = ((robot.EnemyCoordinates.Any() ? robot.EnemyCoordinates.Max(p => p.X) : 0) - robot.Status.X) + 100;
 
+            Console.WriteLine($"Robot.Status.Y: {robot.Status.Y} Robot max Y: {(robot.EnemyCoordinates.Any() ? robot.EnemyCoordinates.Max(p => p.Y) : robot.BattleFieldHeight)}");
             Console.WriteLine($"Driving ahead: {driveAheadDistance}");
 
             robot.Ahead(driveAheadDistance);
