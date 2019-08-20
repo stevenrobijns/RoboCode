@@ -1,0 +1,1 @@
+Install all files from https://sourceforge.net/projects/robocode/files/robocode/1.9.3.3/ in c:\RoboCode
